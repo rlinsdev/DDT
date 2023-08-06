@@ -1,19 +1,18 @@
 using DiApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+// Registring Repo here
+builder.Services.AddScoped<IDataRepo, SqlDataRepo>();
 
 var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-app.MapGet("/getdata", () =>
+// Passing Interface by param
+app.MapGet("/getdata", (IDataRepo repo) =>
 {
-    var repo = new SqlDataRepo();
+
     repo.ReturnData();
-
-    var repoNoSql = new NoSqlDataRepo();
-    repoNoSql.GetData();
-
     return Results.Ok();
 });
 
