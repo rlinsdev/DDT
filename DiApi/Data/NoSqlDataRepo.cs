@@ -1,13 +1,8 @@
 namespace DiApi.Data
 {
-    public class NoSqlDataRepo
+    public class NoSqlDataRepo : IDataRepo
     {
-        // public NoSqlDataRepo()
-        // {
-            
-        // }
-
-        public string GetData()
+        public string ReturnData()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("--> Getting data from Non SQL data base...");
