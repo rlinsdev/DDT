@@ -12,17 +12,11 @@
 ```Bash
 $ dotnet --version
 $ dotnet new webapi -minimal -n DiApi
-# $ dotnet run
-# $ dotnet new grpc -o ToDoGrpc
-# $ dotnet ef migration add InitialMigration
-# $ dotnet ef database update
+# cd DiApi
+$ dotnet watch
+$ dotnet run
 
-#packages:
-# $ dotnet add package microsoft.entityFrameworkCore.sqlite
-# $ dotnet add package microsoft.entityFrameworkCore.design
-# $ dotnet add package grpc.tools
-# $ dotnet add package microsoft.aspnetcore.grpc.jsontranscoding
-
+# Packages
 ```
 
 ## Links:
