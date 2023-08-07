@@ -1,7 +1,8 @@
 # The .NET Developer Toolkit
 
 ## Definition
-*  
+* Dependency Injection is a pattern
+
 
 ## Extra tools
 <!-- * Postman

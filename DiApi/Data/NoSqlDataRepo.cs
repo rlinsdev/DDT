@@ -4,20 +4,36 @@ namespace DiApi.Data
 {
     public class NoSqlDataRepo : IDataRepo
     {
-        // Begin - Structure Dependency Injection pattern 
-        private IDataService _dataService;
+        private readonly IServiceScopeFactory _scopeFactory;
 
-        public NoSqlDataRepo(IDataService dataService)
+        // // Way 1 - Begin - Structure Dependency Injection pattern 
+        // private IDataService _dataService;
+
+        // public NoSqlDataRepo(IDataService dataService)
+        // {
+        //     _dataService = dataService;
+        // }
+        // // End - Structure Dependency Injection pattern 
+
+        // Way 2
+        public NoSqlDataRepo(IServiceScopeFactory scopeFactory)
         {
-            _dataService = dataService;
+            _scopeFactory = scopeFactory;
         }
-        // End - Structure Dependency Injection pattern 
+
 
         public string ReturnData()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("--> Getting data from Non SQL data base...");
-            _dataService.GetProductData("https://something.api");
+            // Way 2
+            using (var scope = _scopeFactory.CreateScope())
+            {
+                var dataService = scope.ServiceProvider.GetRequiredService<IDataService>();
+                dataService.GetProductData("https://something.api");
+            }
+            // Way 1
+            // _dataService.GetProductData("https://something.api");
             Console.ResetColor();
 
             return "No SQL Data From DB";
