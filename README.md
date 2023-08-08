@@ -25,3 +25,4 @@ $ dotnet run
 * [Course](https://www.youtube.com/watch?v=Rqz9XiSqH3E)
 * [.NET Developer Toolkit](https://lesjackson.net/course/dotnet-developer-toolkit)
 * [Dependency injection in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0)
+* [ASP.Net Middleware](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0)
