@@ -1,6 +1,6 @@
 using DiApi.Utility;
 
-namespace DiApi
+namespace DiApi.Middleware
 {
     public class CustomMiddleware
     {
@@ -18,10 +18,18 @@ namespace DiApi
 
         public async Task InvokeAsync(HttpContext context, IOperationScoped scoped)
         {
-            Console.WriteLine($"Middleware; TransientId {_transient.OperationId}; ScopeId{scoped.OperationId};"+
-                " Singleton{_singleton.OperationId}");
+            Console.WriteLine($"Middleware; TransientId: {_transient.OperationId}; ScopeId: {scoped.OperationId};"+
+                " Singleton: {_singleton.OperationId}");
 
             await _next(context);
         }
+    }
+
+    public static class CustomMiddlewareExtensions
+    {
+        public static IApplicationBuilder UseCustomMiddleware(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<CustomMiddleware>();
+        } 
     }
 }
