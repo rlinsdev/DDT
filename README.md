@@ -14,6 +14,7 @@
 ```Bash
 $ dotnet --version
 $ dotnet new webapi -minimal -n DiApi
+$ dotnet new webapi -minimal -n UserApi
 # cd DiApi
 $ dotnet watch
 $ dotnet run
