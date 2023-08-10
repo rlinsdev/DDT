@@ -18,6 +18,12 @@ $ dotnet new webapi -minimal -n UserApi
 # cd DiApi
 $ dotnet watch
 $ dotnet run
+# Secrete storate
+$ dotnet user-secrets init
+$ dotnet user-secrets set "Password" "ususu"
+# C:\Users\username\AppData\Roaming\Microsoft\UserSecrets\DDT-US_6f6f9190-95e9-4a80-9597-068cff308a02
+
+# $ dotnet dev-certs https --trust
 
 # Packages
 ```
