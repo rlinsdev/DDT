@@ -28,7 +28,13 @@ $ dotnet user-secrets set "Password" "ususu"
 # Path C:\Users\username\AppData\Roaming\Microsoft\UserSecrets\DDT-US_6f6f9190-95e9-4a80-9597-068cff308a02
 # $ dotnet dev-certs https --trust
 $ dotnet new console -n CommandConfig
-# Packages
+$ dotnet add package Microsoft.Extensions.Hosting
+$ dotnet user-secrets init
+$ dotnet user-secrets set "Password" "user secrets password"
+# C:\Users\username\AppData\Roaming\Microsoft\UserSecrets\DDT-CONSOLE_796f707c-506f-45f0-a9f2-a0530e4d1e6c
+# 
+# 5. Serializer
+$ dotnet new console -n Serializer
 ```
 
 ## Links:
