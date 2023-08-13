@@ -10,7 +10,10 @@ namespace Serializer.Models
         [JsonPropertyName("ChangeLatName")]
         public string? LastName { get; set;}
         public int Age { get; set; }
+
+        [JsonIgnore]
         public bool IsAlive { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Address? Address {get; set;}
         public IList<Phone>? Phones{ get; set;}
     }
