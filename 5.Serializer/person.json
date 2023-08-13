@@ -1,1 +1,12 @@
-{"Id":1,"FirstName":"Sean","LastName":"Connery","Age":90,"IsAlive":false}
+{
+  "id": 1,
+  "firstName": "Sean",
+  "lastName": "Connery",
+  "age": 90,
+  "isAlive": false,
+  "address": {
+    "streetName": "main Street",
+    "city": "New York",
+    "zipCode": "234324234"
+  }
+}

@@ -6,10 +6,21 @@ var person = new Person{
     FirstName = "Sean",
     LastName = "Connery",
     Age = 90,
-    IsAlive = false
+    IsAlive = false,
+    Address = new Address {
+        StreetName = "main Street",
+        City = "New York",
+        ZipCode = "234324234"
+    }
 };
 
-string jsonString = JsonSerializer.Serialize(person);
+var opt = new JsonSerializerOptions {
+    WriteIndented = true,
+    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+
+};
+
+string jsonString = JsonSerializer.Serialize(person, opt);
 string fileName = "person.json";
 
 File.WriteAllText(fileName, jsonString);
