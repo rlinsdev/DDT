@@ -15,6 +15,7 @@
 $ dotnet --version
 #
 # 2. Dependency Injection
+# -n to specify the Project name
 $ dotnet new webapi -minimal -n DiApi
 $ dotnet new webapi -minimal -n UserApi
 # cd DiApi
@@ -35,6 +36,9 @@ $ dotnet user-secrets set "Password" "user secrets password"
 # 
 # 5. Serializer
 $ dotnet new console -n Serializer
+# 
+# 6. Deserializer
+$ dotnet new console -n 6.Deserializer
 ```
 
 ## Links:
