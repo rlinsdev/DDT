@@ -1,4 +1,4 @@
-namespace Serializer.Models
+namespace Deserializer.Models
 {
     public class Address
     {

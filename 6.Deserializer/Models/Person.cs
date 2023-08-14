@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Serializer.Models
+namespace Deserializer.Models
 {
     public class Person
     {
