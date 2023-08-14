@@ -1,0 +1,21 @@
+{
+  "id": 1,
+  "firstname": "Sean",
+  "ChangeLatName": "Connery",
+  "age": 90,
+  "address": {
+    "streetname": "main Street",
+    "city": "New York",
+    "zipcode": "234324234"
+  },
+  "phones": [
+    {
+      "type": "Home",
+      "number": "1654654"
+    },
+    {
+      "type": "Mobile",
+      "number": "32323232"
+    }
+  ]
+}
