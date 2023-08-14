@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using Serializer.Models;
+using Serializer.Helpers;
 
 var person = new Person{
     Id = 1,
@@ -20,7 +21,7 @@ var person = new Person{
 
 var opt = new JsonSerializerOptions {
     WriteIndented = true,
-    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+    PropertyNamingPolicy = new LowerCaseNamingPolicy(),
 
 };
 

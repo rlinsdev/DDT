@@ -1,12 +1,12 @@
 {
   "id": 1,
-  "firstName": "Sean",
+  "firstname": "Sean",
   "ChangeLatName": "Connery",
   "age": 90,
   "address": {
-    "streetName": "main Street",
+    "streetname": "main Street",
     "city": "New York",
-    "zipCode": "234324234"
+    "zipcode": "234324234"
   },
   "phones": [
     {
