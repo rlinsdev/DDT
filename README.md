@@ -39,6 +39,9 @@ $ dotnet new console -n Serializer
 # 
 # 6. Deserializer
 $ dotnet new console -n 6.Deserializer
+# 
+# 7. Scaffolding API
+$ dotnet new webapi -minimal -n 7.WeatherAPI
 ```
 
 ## Links:
