@@ -3,11 +3,15 @@
 ## Definition
 * Dependency Injection is a pattern
 * "ASP.NET Core supports the dependency injection (DI) software design pattern, which is a technique for achieving Inversion of Control (IoC) between classes and their dependencies."
+* Repository Pattern
+  * Repositories encapsulate data access implementation
+  * Decouple implementation / technology from the domain model
 
 
 ## Extra tools
-<!-- * Postman
-* DBeaver -->
+* Postman
+* Docker
+<!-- * DBeaver -->
 
 
 ## Commands
@@ -43,6 +47,10 @@ $ dotnet new console -n 6.Deserializer
 # 7. Scaffolding API
 $ dotnet new webapi -minimal -n 7.WeatherAPI
 # Extension: Past JSon as Code. Ctrl+Shift+P - Past Json as Code
+#
+# 8. The repository Pattern
+$ dotnet new webapi -minimal -n 8.CommandAPI
+
 ```
 
 ## Links:
