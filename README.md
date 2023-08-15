@@ -50,6 +50,9 @@ $ dotnet new webapi -minimal -n 7.WeatherAPI
 #
 # 8. The repository Pattern
 $ dotnet new webapi -minimal -n 8.CommandAPI
+$ dotnet add package Microsoft.EntityFrameworkCore
+$ dotnet add package Microsoft.EntityFrameworkCore.Design
+$ docker compose up -d
 
 ```
 
