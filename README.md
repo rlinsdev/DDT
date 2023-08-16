@@ -6,6 +6,7 @@
 * Repository Pattern
   * Repositories encapsulate data access implementation
   * Decouple implementation / technology from the domain model
+  * AppDbContext: EntityFrameworkCore concept. Connect Models with SQL
 
 
 ## Extra tools
@@ -52,7 +53,9 @@ $ dotnet new webapi -minimal -n 7.WeatherAPI
 $ dotnet new webapi -minimal -n 8.CommandAPI
 $ dotnet add package Microsoft.EntityFrameworkCore
 $ dotnet add package Microsoft.EntityFrameworkCore.Design
+$ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 $ docker compose up -d
+$ dotnet ef migrations add initialmigration
 
 ```
 
