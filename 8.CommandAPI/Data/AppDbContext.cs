@@ -10,7 +10,7 @@ namespace CommandApi.Data
             
         }
 
-        public DbSet<Command> commands => Set<Command>();
+        public DbSet<Command> Commands => Set<Command>();
 
     }
 }
