@@ -49,7 +49,8 @@ $ dotnet new console -n 6.Deserializer
 $ dotnet new webapi -minimal -n 7.WeatherAPI
 # Extension: Past JSon as Code. Ctrl+Shift+P - Past Json as Code
 #
-# 8. The repository Pattern
+# 8. The repository Pattern.
+# Open Docker Desktop without Kubernets, or you machine will die
 $ dotnet new webapi -minimal -n 8.CommandAPI
 $ dotnet add package Microsoft.EntityFrameworkCore
 $ dotnet add package Microsoft.EntityFrameworkCore.Design
