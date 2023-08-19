@@ -17,7 +17,10 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 builder.Services.AddSingleton<IConnectionMultiplexer>(opt => 
     ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("RedisConnection")));
 
-builder.Services.AddScoped<ICommandRepo, SqlCommandRepo>();
+// SQL
+// builder.Services.AddScoped<ICommandRepo, SqlCommandRepo>();
+// Redis
+builder.Services.AddScoped<ICommandRepo, RedisCommandRepo>();
 
 var app = builder.Build();
 
