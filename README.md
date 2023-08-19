@@ -65,6 +65,9 @@ $ dotnet add package Microsoft.Extensions.Caching.StackExchangeRedis
 #
 # 9. DTOs
 $ dotnet new webapi -minimal -n 9.PersonAPI
+$ dotnet add package Microsoft.EntityFrameworkCore
+$ dotnet add package Microsoft.EntityFrameworkCore.Design
+$ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 ```
 
 ## Links:
