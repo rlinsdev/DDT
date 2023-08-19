@@ -56,6 +56,7 @@ $ dotnet add package Microsoft.EntityFrameworkCore
 $ dotnet add package Microsoft.EntityFrameworkCore.Design
 $ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 $ docker compose up -d
+$ docker stop
 $ dotnet ef migrations add initialmigration
 $ dotnet ef database update
 # To avoid error, change the connection string - Encrypt-False: '...por uma autoridade que não é de confiança' // Encrypt: https://stackoverflow.com/questions/17615260/the-certificate-chain-was-issued-by-an-authority-that-is-not-trusted-when-conn
