@@ -3,7 +3,7 @@
 ## Definition
 * Dependency Injection is a pattern
 * "ASP.NET Core supports the dependency injection (DI) software design pattern, which is a technique for achieving Inversion of Control (IoC) between classes and their dependencies."
-* Repository Pattern
+* Repository Pattern: Easy form to change the data base to use in your application
   * Repositories encapsulate data access implementation
   * Decouple implementation / technology from the domain model
   * AppDbContext: EntityFrameworkCore concept. Connect Models with SQL

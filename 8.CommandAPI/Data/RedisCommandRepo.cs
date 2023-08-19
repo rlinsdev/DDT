@@ -27,7 +27,9 @@ namespace CommandApi.Data
 
         public void DeleteCommand(Command cmd)
         {
-            throw new NotImplementedException();
+            var db = _redis.GetDatabase();
+
+            db.HashDelete("commands", cmd.CommandId);
         }
 
         public async Task<IEnumerable<Command?>?> GetAllCommandsAsync()
@@ -43,15 +45,31 @@ namespace CommandApi.Data
             return new List<Command>();
         }
 
-        public Task<Command?> GetCommandByIdAsync(string commandId)
+        public async Task<Command?> GetCommandByIdAsync(string commandId)
         {
-            throw new NotImplementedException();
+            var db = _redis.GetDatabase();
+
+            var command = await db.HashGetAsync("commands", commandId);
+
+            if (!string.IsNullOrEmpty(command))
+                return JsonSerializer.Deserialize<Command>(command);
+            
+            return null;
         }
 
         public async Task SaveChangesAsync()
         {
             Console.WriteLine("--> Save Changes");
             await Task.CompletedTask;
+        }
+
+        public async Task UpdateCommandAsync(Command cmd)
+        {
+            var db = _redis.GetDatabase();
+
+            var serialCommand = JsonSerializer.Serialize(cmd);
+
+            await db.HashSetAsync($"commands", new HashEntry[] {new HashEntry(cmd.CommandId, serialCommand)});
         }
     }
 }

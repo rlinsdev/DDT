@@ -68,7 +68,8 @@ app.MapPut("api/v1/commands/{commandId}", async(ICommandRepo repo, string comman
     commands.CommandLine = cmd.CommandLine;
     commands.Platform = cmd.Platform;
 
-     await repo.SaveChangesAsync();
+    await repo.UpdateCommandAsync(commands);    
+    await repo.SaveChangesAsync();
 
     return Results.NoContent();
 });
