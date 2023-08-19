@@ -7,7 +7,8 @@
   * Repositories encapsulate data access implementation
   * Decouple implementation / technology from the domain model
   * AppDbContext: EntityFrameworkCore concept. Connect Models with SQL
-
+* DTOs Data Transfer Objects
+* Object Mapping
 
 ## Extra tools
 * Postman
@@ -61,7 +62,9 @@ $ dotnet ef migrations add initialmigration
 $ dotnet ef database update
 # To avoid error, change the connection string - Encrypt-False: '...por uma autoridade que não é de confiança' // Encrypt: https://stackoverflow.com/questions/17615260/the-certificate-chain-was-issued-by-an-authority-that-is-not-trusted-when-conn
 $ dotnet add package Microsoft.Extensions.Caching.StackExchangeRedis
-
+#
+# 9. DTOs
+$ dotnet new webapi -minimal -n 9.PersonAPI
 ```
 
 ## Links:
