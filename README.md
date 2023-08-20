@@ -68,6 +68,8 @@ $ dotnet new webapi -minimal -n 9.PersonAPI
 $ dotnet add package Microsoft.EntityFrameworkCore
 $ dotnet add package Microsoft.EntityFrameworkCore.Design
 $ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+$ dotnet ef migrations add initial_migration
+$ dotnet ef database update
 ```
 
 ## Links:
