@@ -13,6 +13,7 @@ namespace CommandApi.Data
         {
             _redis = redis;
         }
+        
         public async Task CreateCommandAsync(Command cmd)
         {
             if (cmd == null)
