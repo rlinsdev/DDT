@@ -61,4 +61,19 @@ app.MapPut("api/v1/people", async (AppDbContext context, int id, Person person) 
     return Results.NoContent();
 });
 
+// delete
+app.MapDelete("api/v1/people/{id}",  async (AppDbContext context, int id) => {
+    var personModel = await context.People.FindAsync(id);
+
+    if (personModel == null)
+        return Results.NotFound();
+
+    context.People.Remove(personModel);
+
+    await context.SaveChangesAsync();
+    
+    // Best practices return a register removed
+    return Results.Ok(personModel);
+});
+
 app.Run();
