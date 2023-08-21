@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace PersonAPI.Models
+namespace PersonAPI.Dtos
 {
-    public class Person
+    public class PersonDto
     {
         [Key]
         public int Id { get; set; }
@@ -10,7 +10,8 @@ namespace PersonAPI.Models
         public string? FullName { get; set; }
         [Required]
         public string? Telephone { get; set; }
-        [Required]
-        public string? DoB {get; set;}
+
+        // [Required]
+        // public string? DoB {get; set;}
     }
 }

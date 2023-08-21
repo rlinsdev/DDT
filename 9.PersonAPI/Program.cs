@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PersonAPI.Data;
+using PersonAPI.Dtos;
 using PersonAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,12 +30,18 @@ app.MapGet("api/v1/people", async (AppDbContext context) => {
 
 // Get Single
 app.MapGet("api/v1/people/{id}", async (AppDbContext context, int id) => {
-    var person = await context.People.FindAsync(id);
+    var personModel = await context.People.FindAsync(id);
 
-    if (person == null)
+    if (personModel == null)
         return Results.NotFound();
 
-    return Results.Ok(person);
+    var personDto = new PersonDto {
+        Id = personModel.Id,
+        FullName = personModel.FullName,
+        Telephone = personModel.Telephone
+    };
+
+    return Results.Ok(personDto);
 });
 
 // Create
