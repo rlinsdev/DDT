@@ -47,7 +47,7 @@ app.MapPost("api/v1/people", async (AppDbContext context, Person person) => {
 });
 
 // Update
-app.MapPut("api/v1/people", async (AppDbContext context, int id, Person person) => {
+app.MapPut("api/v1/people/{Id}", async (AppDbContext context, int id, Person person) => {
     var personModel = await context.People.FindAsync(id);
 
     if (personModel == null)
@@ -71,7 +71,7 @@ app.MapDelete("api/v1/people/{id}",  async (AppDbContext context, int id) => {
     context.People.Remove(personModel);
 
     await context.SaveChangesAsync();
-    
+
     // Best practices return a register removed
     return Results.Ok(personModel);
 });
