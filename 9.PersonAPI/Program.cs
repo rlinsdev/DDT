@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<AppDbContext>(opt => 
+builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("SqlDbConnection")));
 
 var app = builder.Build();
@@ -23,6 +23,15 @@ app.MapGet("api/v1/people", async (AppDbContext context) => {
     var people = await context.People.ToListAsync();
 
     return Results.Ok(people);
+});
+
+app.MapGet("api/vi/people/{id}", async (AppDbContext context, int id) => {
+    var person = await context.People.FindAsync(id);
+
+    if (person == null)
+        return Results.NotFound();
+
+    return Results.Ok(person);
 });
 
 app.Run();
