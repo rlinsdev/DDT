@@ -1,5 +1,6 @@
 # The .NET Developer Toolkit
 
+
 ## Definition
 * Dependency Injection is a pattern
 * "ASP.NET Core supports the dependency injection (DI) software design pattern, which is a technique for achieving Inversion of Control (IoC) between classes and their dependencies."
@@ -10,10 +11,11 @@
 * DTOs Data Transfer Objects
 * Object Mapping
 
+
 ## Extra tools
 * Postman
 * Docker
-<!-- * DBeaver -->
+* SQL management studio
 
 
 ## Commands

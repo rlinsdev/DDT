@@ -13,7 +13,7 @@ namespace PersonAPI.Models
         [Required]
         public string? DoB {get; set;}
         
-        public int Age {get {
+        public int YearsAlive {get {
             var today = DateTime.Today;
 
             var splitDoB = DoB!.Split("-");
