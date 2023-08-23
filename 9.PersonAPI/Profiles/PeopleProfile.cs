@@ -12,7 +12,8 @@ namespace PersonAPI.Profiles
             CreateMap<Person, PersonReadDto>()
                 .ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.YearsAlive)); // Map propert different names
 
-            CreateMap<PersonCreateDto, Person>();   
+            CreateMap<PersonCreateDto, Person>()
+                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FirstName + " " + src.LastName));   // Map First + Last name to FullName
         }
     }
 }
