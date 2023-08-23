@@ -62,15 +62,17 @@ app.MapPost("api/v1/people", async (AppDbContext context, PersonCreateDto person
 });
 
 // Update
-app.MapPut("api/v1/people/{Id}", async (AppDbContext context, int id, Person person) => {
+app.MapPut("api/v1/people/{Id}", async (AppDbContext context, int id, PersonUpdateDto personUpdateDto, IMapper mapper) => {
     var personModel = await context.People.FindAsync(id);
 
     if (personModel == null)
         return Results.NotFound();
 
-    personModel.FullName = person.FullName;
-    personModel.Telephone = person.Telephone;
-    personModel.DoB = person.DoB;
+    mapper.Map(personUpdateDto, personModel);
+
+    // personModel.FullName = person.FullName;
+    // personModel.Telephone = person.Telephone;
+    // personModel.DoB = person.DoB;
 
     await context.SaveChangesAsync();
     return Results.NoContent();

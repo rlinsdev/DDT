@@ -14,6 +14,11 @@ namespace PersonAPI.Profiles
 
             CreateMap<PersonCreateDto, Person>()
                 .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FirstName + " " + src.LastName));   // Map First + Last name to FullName
+        
+            CreateMap<PersonUpdateDto, Person>()
+                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FirstName + " " + src.LastName));   // Map First + Last name to FullName
+
+
         }
     }
 }
