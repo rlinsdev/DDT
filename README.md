@@ -73,6 +73,9 @@ $ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 $ dotnet ef migrations add initial_migration
 $ dotnet ef database update
 $ dotnet add package Automapper.Extensions.Microsoft.DependencyInjection
+# Add house column
+$ dotnet ef migrations add addhouse
+$ dotnet ef database updated
 ```
 
 ## Links:
