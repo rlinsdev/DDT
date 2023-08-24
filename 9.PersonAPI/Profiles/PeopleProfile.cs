@@ -9,8 +9,11 @@ namespace PersonAPI.Profiles
         public PeopleProfile()
         {
             // Source -> Destination
+            // CreateMap<Person, PersonReadDto>()
+            //     .ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.YearsAlive)); // Map propert different names
+
             CreateMap<Person, PersonReadDto>()
-                .ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.YearsAlive)); // Map propert different names
+                .ForMember(dest => dest.Age, opt => opt.MapFrom<AgeResolver>()); // Map propert different names
 
             CreateMap<PersonCreateDto, Person>()
                 .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FirstName + " " + src.LastName));   // Map First + Last name to FullName
