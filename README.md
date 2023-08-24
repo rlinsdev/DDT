@@ -76,6 +76,8 @@ $ dotnet add package Automapper.Extensions.Microsoft.DependencyInjection
 # Add house column
 $ dotnet ef migrations add addhouse
 $ dotnet ef database updated
+$ dotnet ef migrations add addpoints
+$ dotnet ef database updated
 ```
 
 ## Links:

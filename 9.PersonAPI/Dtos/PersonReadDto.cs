@@ -14,5 +14,8 @@ namespace PersonAPI.Dtos
         // [Required]
         // public string? DoB {get; set;}
         public int Age { get; set; }
+
+        public string? House { get; set; }
+        public int? Points {get; set;}
     }
 }
