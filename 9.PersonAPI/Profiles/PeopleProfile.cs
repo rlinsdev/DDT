@@ -18,8 +18,9 @@ namespace PersonAPI.Profiles
             CreateMap<PersonCreateDto, Person>()
                 .ForMember(dest => dest.FullName, opt => opt.MapFrom(
                 // src => src.FirstName + " " + src.LastName));   // Map First + Last name to FullName
-                new FullNameResolver()!));   // Map First + Last name to FullName
-        
+                new FullNameResolver()!))   // Map First + Last name to FullName
+                .ForMember(dest => dest.House, opt => opt.NullSubstitute("HufflePuff")); // Null Subistitution
+
             CreateMap<PersonUpdateDto, Person>()
                 .ForMember(dest => dest.FullName, opt => opt.MapFrom(
                 src => src.FirstName + " " + src.LastName));   // Map First + Last name to FullName
