@@ -10,6 +10,11 @@
   * AppDbContext: EntityFrameworkCore concept. Connect Models with SQL
 * DTOs Data Transfer Objects
 * Object Mapping
+* Docker 
+  * Containerization platform
+  * Build your application into images
+  * Run them as containers
+  * App Virtualiziation. Not OS Virtualization (VMs)
 
 
 ## Extra tools
@@ -78,6 +83,9 @@ $ dotnet ef migrations add addhouse
 $ dotnet ef database updated
 $ dotnet ef migrations add addpoints
 $ dotnet ef database updated
+#
+#10. Docker
+
 ```
 
 ## Links:
