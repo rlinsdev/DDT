@@ -85,6 +85,9 @@ $ dotnet ef migrations add addpoints
 $ dotnet ef database updated
 #
 #10. Docker
+$ wsl -l -v #Version of WSL. Docker will run under this
+$ docker -v #Docker version
+$ docker ps #Show all running container
 
 ```
 
