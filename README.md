@@ -88,6 +88,11 @@ $ dotnet ef database updated
 $ wsl -l -v #Version of WSL. Docker will run under this
 $ docker -v #Docker version
 $ docker ps #Show all running container
+$ docker stop [containerId] #stop specific container
+#Setup SQL
+$ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=blabla@@333' -e 'MSSQL_PID=Express' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+#Project
+$ dotnet new webapi -minimal -n 10.ToDoAPI
 
 ```
 
