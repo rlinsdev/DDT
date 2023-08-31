@@ -93,6 +93,7 @@ $ docker stop [containerId] #stop specific container
 $ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=blabla@@333' -e 'MSSQL_PID=Express' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
 #Project
 $ dotnet new webapi -minimal -n 10.ToDoAPI
+$ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
 ```
 
