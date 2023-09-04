@@ -96,6 +96,9 @@ $ dotnet new webapi -minimal -n 10.ToDoAPI
 $ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 $ docker build -t <docker_hub_id>/todoapi . #docker build -t 22369/todoapi .
 $ docker run -p 8080:80 22369/todoapi
+$ docker login
+$ docker push 22369/todoapi
+# deploying in azure
 
 ```
 
