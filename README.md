@@ -103,6 +103,17 @@ $ docker push 22369/todoapi
 $ dotnet dev-certs https -ep C:\Users\rlins\.aspnet\https\10.ToDoAPI.pfx -p pa55w0rd!
 $ dotnet dev-certs https --trust
 $ dotnet user-secrets init
+$ dotnet user-secrets set "Kestrel:Certificates:Development:Password" "pa55w0rd!"
+$ docker build -t 22369/todoapi .
+#
+# Specify ports to work [-p 8080:80 -p 8081:443]
+# Variables - URLs [-e https://+;http://+]
+# Variables - Set port [-e ASPNETCORE_HTTPS_PORT=8081]
+# Variables - Set Environment [-e ASPNETCORE_ENVIRONMENT=Development]
+# User Secret [-v $env:APPDATA\microsoft\UserSecrets\:/root/.microsoft/usersecrets]
+# User Secret [-v $env:USERPROFILE\.aspnet\https:/root/.aspnet/https/]
+# Name of image to run - [22369/todoapi]
+$ docker run -p 8080:80 -p 8081:443 -e ASPNETCORE_URLS="https://+;http://+" -e ASPNETCORE_HTTPS_PORT=8081 -e ASPNETCORE_ENVIRONMENT=Development -v $env:APPDATA\microsoft\UserSecrets\:/root/.microsoft/usersecrets -v $env:USERPROFILE\.aspnet\https:/root/.aspnet/https/ 22369/todoapi
 
 
 ```
