@@ -99,6 +99,11 @@ $ docker run -p 8080:80 22369/todoapi
 $ docker login
 $ docker push 22369/todoapi
 # deploying in azure
+# Certificate:
+$ dotnet dev-certs https -ep C:\Users\rlins\.aspnet\https\10.ToDoAPI.pfx -p pa55w0rd!
+$ dotnet dev-certs https --trust
+$ dotnet user-secrets init
+
 
 ```
 
