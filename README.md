@@ -114,6 +114,10 @@ $ docker build -t 22369/todoapi .
 # User Secret [-v $env:USERPROFILE\.aspnet\https:/root/.aspnet/https/]
 # Name of image to run - [22369/todoapi]
 $ docker run -p 8080:80 -p 8081:443 -e ASPNETCORE_URLS="https://+;http://+" -e ASPNETCORE_HTTPS_PORT=8081 -e ASPNETCORE_ENVIRONMENT=Development -v $env:APPDATA\microsoft\UserSecrets\:/root/.microsoft/usersecrets -v $env:USERPROFILE\.aspnet\https:/root/.aspnet/https/ 22369/todoapi
+$ dotnet add package Microsoft.EntityFrameworkCore
+$ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+$ dotnet add package Microsoft.EntityFrameworkCore.Design
+$ dotnet ef migrations add initial
 
 
 ```
