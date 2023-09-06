@@ -24,5 +24,20 @@ app.MapPost("api/todo", async (AppDbContext context, ToDo toDo) => {
     return Results.Created($"api/todo/{toDo.Id}", toDo);
 });
 
+using (var scope = app.Services.CreateScope())
+{
+    try
+    {
+        var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        dbContext.Database.Migrate();
+        Console.WriteLine("DataBase migrated successfully");
+
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Could not migrate DB: "ex.Message);
+    }
+}
+
 app.Run();
 

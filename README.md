@@ -26,6 +26,8 @@
 ## Commands
 ```Bash
 $ dotnet --version
+#Update EntityFramework Tools
+$ dotnet tool update  --global dotnet-ef
 #
 # 2. Dependency Injection
 # -n to specify the Project name
