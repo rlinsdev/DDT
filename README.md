@@ -123,6 +123,7 @@ $ dotnet ef migrations add initial
 #
 #11. Docker
 $ dotnet new console -n 11.PrintColour
+$ dotnet new gitignore # gitignore to dotnet
 
 
 ```
