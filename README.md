@@ -25,10 +25,14 @@
   * CD - Continuous Deployment
     * Code changes will make their way into production, without manual intervention
 
+## Images
+![CI/CD in course:](./img/CI-CD.png)
+
 ## Extra tools
 * Postman
 * Docker
 * SQL management studio
+* GitHub Cli
 
 
 ## Commands
@@ -134,7 +138,9 @@ $ dotnet new console -n 11.PrintColour
 $ dotnet new gitignore # gitignore to dotnet
 $ git checkout -b <new-branch> | git branch <new-branch> #Create new branch
 $ git branch -d <branch-to-delete> #delete local branch
-
+#
+#12.ToDoAPI
+$ dotnet new webapi -minimal -n ToDoAPI
 ```
 
 ## Links:
@@ -142,3 +148,5 @@ $ git branch -d <branch-to-delete> #delete local branch
 * [.NET Developer Toolkit](https://lesjackson.net/course/dotnet-developer-toolkit)
 * [Dependency injection in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0)
 * [ASP.Net Middleware](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0)
+* [Azure Devops](https://azure.microsoft.com/en-gb/products/devops/)
+
