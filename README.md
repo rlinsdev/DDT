@@ -15,7 +15,15 @@
   * Build your application into images
   * Run them as containers
   * App Virtualiziation. Not OS Virtualization (VMs)
-
+* CI/CD
+  * CI - Continuous Integration
+    * Taking code from 1 or more developers, build and testing to ensure that those changes will not break the build
+    * Triggered when developers checkin changes to a repository
+  * CD - Continuous Delivery
+    * Automating release process
+    * You can deploy changes 'pressing a button' - Manual
+  * CD - Continuous Deployment
+    * Code changes will make their way into production, without manual intervention
 
 ## Extra tools
 * Postman
@@ -121,10 +129,11 @@ $ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 $ dotnet add package Microsoft.EntityFrameworkCore.Design
 $ dotnet ef migrations add initial
 #
-#11. Docker
+#11. Git
 $ dotnet new console -n 11.PrintColour
 $ dotnet new gitignore # gitignore to dotnet
-
+$ git checkout -b <new-branch> | git branch <new-branch> #Create new branch
+$ git branch -d <branch-to-delete> #delete local branch
 
 ```
 
