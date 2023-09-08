@@ -140,7 +140,8 @@ $ git checkout -b <new-branch> | git branch <new-branch> #Create new branch
 $ git branch -d <branch-to-delete> #delete local branch
 #
 #12.ToDoAPI
-$ dotnet new webapi -minimal -n ToDoAPI
+src>$ dotnet new webapi -minimal -n ToDoAPI
+test>$ dotnet new xunit -n ToDoAPI.Tests
 ```
 
 ## Links:
