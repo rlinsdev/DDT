@@ -140,8 +140,17 @@ $ git checkout -b <new-branch> | git branch <new-branch> #Create new branch
 $ git branch -d <branch-to-delete> #delete local branch
 #
 #12.ToDoAPI
-src>$ dotnet new webapi -minimal -n ToDoAPI
-test>$ dotnet new xunit -n ToDoAPI.Tests
+12.ToDoAPI\src>$ dotnet new webapi -minimal -n ToDoAPI
+12.ToDoAPI\test>$ dotnet new xunit -n ToDoAPI.Tests
+12.ToDoAPI>$ dotnet new sln --name ToDoAPISolution # Generate .sln file
+12.ToDoAPI>$ dotnet sln ToDoAPISolution.sln add src/ToDoAPI/ToDoAPI.csproj
+12.ToDoAPI>$ dotnet sln ToDoAPISolution.sln add test/ToDoAPI.Tests/ToDoAPI.Tests.csproj
+
+12.ToDoAPI>$ dotnet add package Microsoft.EntityFrameworkCore
+12.ToDoAPI>$ dotnet add package Microsoft.EntityFrameworkCore.Design
+12.ToDoAPI>$ dotnet add package Microsoft.EntityFrameworkCore.InMemory
+
+
 ```
 
 ## Links:
