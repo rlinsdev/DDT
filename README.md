@@ -145,11 +145,14 @@ $ git branch -d <branch-to-delete> #delete local branch
 12.ToDoAPI>$ dotnet new sln --name ToDoAPISolution # Generate .sln file
 12.ToDoAPI>$ dotnet sln ToDoAPISolution.sln add src/ToDoAPI/ToDoAPI.csproj
 12.ToDoAPI>$ dotnet sln ToDoAPISolution.sln add test/ToDoAPI.Tests/ToDoAPI.Tests.csproj
+12.ToDoAPI>$ dotnet add test/ToDoAPI.Tests/ToDoAPI.Tests.csproj reference src/ToDoAPI/ToDoAPI.csproj
+
 
 12.ToDoAPI>$ dotnet add package Microsoft.EntityFrameworkCore
 12.ToDoAPI>$ dotnet add package Microsoft.EntityFrameworkCore.Design
 12.ToDoAPI>$ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
+12.ToDoAPI\test\ToDoAPI.Tests>$ dotnet test
 
 ```
 
