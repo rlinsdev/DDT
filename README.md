@@ -28,11 +28,13 @@
 ## Images
 ![CI/CD in course:](./img/CI-CD.png)
 
+
 ## Extra tools
 * Postman
 * Docker
 * SQL management studio
 * GitHub Cli
+* VsCode Extension - Azure pipe line
 
 
 ## Commands
@@ -162,4 +164,5 @@ $ git branch -d <branch-to-delete> #delete local branch
 * [Dependency injection in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0)
 * [ASP.Net Middleware](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0)
 * [Azure Devops](https://azure.microsoft.com/en-gb/products/devops/)
+* [Devops Portal](https://dev.azure.com/rlinsdev/)
 
